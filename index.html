@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stl Slicer</title>
+</head>
+
+<body>
+  <form class="container" enctype="multipart/form-data">
+    <h1 class="title">STL SLICER</h1>
+    <div class="form">
+      <p class="alert-form" id="alert-form">
+        <i class="fa-solid fa-circle-check" id="icon-alert-form"></i>
+        <span id="txt-alert-form">Archivo Analizado Satisfactoriamente</span>
+      </p>
+      <div class="row">
+        <label for="input-file" class="label label-file">Archivo Stl:</label>
+        <div class="btn btn-file">
+          <input type="file" class="input-file" id="input-file">
+          <p class="txt-file" id="txt-file">
+            <i class="fa-solid fa-upload"></i>
+            Selecciona un stl
+          </p>
+        </div>
+      </div>
+      <div class="row row-stl-viewer">
+        <stl-part-viewer></stl-part-viewer>
+      </div>
+      <div class="row">
+        <button type="submit" class="btn btn-submit">
+          <i class="fa-solid fa-paper-plane"></i>
+          Analizar Archivo
+        </button>
+      </div>
+    </div>
+
+    <div class="info-stl">
+      <div class="row">
+        <div class="col">
+          <label class="txt-col">Volumen:</label>
+          <label class="txt-col">
+            <span id="stl-volume">0.015792687767717663</span> cm^3
+          </label>
+        </div>
+
+        <div class="col">
+          <label class="txt-col">Peso:</label>
+          <label class="txt-col">
+            <span id="stl-weight">0.01642439527842637</span> g
+          </label>
+        </div>
+
+        <div class="col">
+          <label class="txt-col">Area:</label>
+          <label class="txt-col">
+            <span id="stl-area">40.75610220907029</span> m^2
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <h2 class="title-col">Cuadro Contenedor</h2>
+        <div class="sub-row">
+          <div class="col">
+            <label class="txt-col">Ancho:</label>
+            <label class="txt-col">
+              <span id="stl-width">4.5</span> mm
+            </label>
+          </div>
+  
+          <div class="col">
+            <label class="txt-col">Alto:</label>
+            <label class="txt-col">
+              <span id="stl-height">4.5</span> mm
+            </label>
+          </div>
+  
+          <div class="col">
+            <label class="txt-col">Profundidad:</label>
+            <label class="txt-col">
+              <span id="stl-volume">1.5000000000005111</span> mm
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="title-col">Centro de Masa</h2>
+        <div class="sub-row">
+          <div class="col">
+            <label class="txt-col">X:</label>
+            <label class="txt-col">
+              <span id="stl-centerOfMass-x">37.75000750511655</span> mm
+            </label>
+          </div>
+  
+          <div class="col">
+            <label class="txt-col">Y:</label>
+            <label class="txt-col">
+              <span id="stl-centerOfMass-y">46.25000751548055</span> mm
+            </label>
+          </div>
+  
+          <div class="col">
+            <label class="txt-col">Z:</label>
+            <label class="txt-col">
+              <span id="stl-centerOfMass-z">0.562165832719857</span> mm
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slicer-stl">
+      <label class="label label-height-layer">
+        Altura de capa:
+        <span id="height-layer">-1.0000000000005111</span>
+      </label>
+
+      <div class="container-stl-canvas">
+        <canvas class="stl-canvas" id="stl-canvas"></canvas>
+      </div>
+
+      <input type="range" min="1" max="629" step="1" value="1" class="input-height-slicer" id="input-height-slicer">
+    </div>
+  </form>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

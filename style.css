@@ -1,0 +1,274 @@
+/*-----------------------------------*/
+/* estilos generales */
+/*-----------------------------------*/
+:root {
+    --separacion: 30px;
+    --separacion-small: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    display: block;
+    min-height: 100vh;
+    background: #DEDEDE;
+    color: #000;
+}
+
+/*-----------------------------------*/
+/* estilos del container */
+/*-----------------------------------*/
+.container {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.container .title {
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: var(--separacion);
+}
+
+/*-----------------------------------*/
+/* estilos de los label */
+/*-----------------------------------*/
+.container .label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--separacion-small);
+}
+/*-----------------------------------*/
+/* estilos del form */
+/*-----------------------------------*/
+.container .form {
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: var(--separacion);
+    margin-bottom: var(--separacion);
+}
+
+.container .form .row {
+    display: block;
+    width: 100%;
+}
+
+/*-----------------------------------*/
+/* estilos del alert-form */
+/*-----------------------------------*/
+.container .form .alert-form {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: var(--separacion-small) 0;
+    margin-bottom: var(--separacion-small);
+    transition: all .3S ease;
+    transform: scaleY(0);
+}
+
+.container .form .alert-form i {
+    margin-right: var(--separacion-small);
+}
+
+.container .form .alert-form.is-green {
+    background: #00FF00;
+    transform: scaleY(1);
+}
+
+.container .form .alert-form.is-red {
+    background: #FF0000;
+    transform: scaleY(1);
+}
+
+/*-----------------------------------*/
+/* estilos de los btn */
+/*-----------------------------------*/
+.container .btn {
+    display: block;
+    width: 100%;
+    background: #0074D9;
+    color: #fff;
+    padding: var(--separacion-small) 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3S ease;
+    margin-bottom: var(--separacion-small);
+}
+
+.container .btn i {
+    margin-right: var(--separacion-small);
+}
+
+.container .btn:hover {
+    background: rgba(0, 116, 217, .5);
+}
+
+.container .btn:active {
+    transform: scale(.95);
+}
+
+/* estilos del btn file */
+.container .btn-file {
+    position: relative;
+    margin-bottom: var(--separacion);
+}
+
+.container .btn-file .input-file {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.container .btn-file .txt-file {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.container .btn-file .txt-file i {
+    margin-right: var(--separacion-small);
+}
+
+/* estilos del btn submit */
+.container .btn-submit {
+    margin-top: var(--separacion-small);
+    margin-bottom: 0;
+}
+
+/*-----------------------------------*/
+/* estilos del stl-part-viewer */
+/*-----------------------------------*/
+.container .form .row-stl-viewer {
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+
+.container .form .row stl-part-viewer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*-----------------------------------*/
+/* estilos del info-stl */
+/*-----------------------------------*/
+.container .info-stl {
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: var(--separacion-small);
+    margin-bottom: var(--separacion);
+}
+
+.container .info-stl .row {
+    margin-bottom: var(--separacion);
+}
+
+.container .info-stl .sub-row,
+.container .info-stl .row:nth-child(1) {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .info-stl .sub-row .col,
+.container .info-stl .row:nth-child(1) .col {
+    display: block;
+    width: 33.33%;
+}
+
+.container .info-stl .row .title-col {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--separacion-small);
+}
+
+/*-----------------------------------*/
+/* estilos del slicer-stl */
+/*-----------------------------------*/
+.container .slicer-stl {
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: var(--separacion);
+}
+
+.container .slicer-stl .label-height-layer {
+    margin-bottom: var(--separacion-small);
+}
+
+.container .slicer-stl .container-stl-canvas {
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    margin-bottom: var(--separacion-small);
+}
+
+.container .slicer-stl .container-stl-canvas .stl-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #DEDEDE;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container .slicer-stl .input-height-slicer {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    box-shadow: insert 0px 0px 4px rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container .slicer-stl .input-height-slicer::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0074D9;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    appearance: none;
+}
+
+.container .slicer-stl .input-height-slicer::-moz-range-progress {
+    height: 10px;
+    background: #0074D9;
+    border-radius: 25px;
+}
+
+.container .slicer-stl .input-height-slicer:active::-moz-range-thumb {
+    background: #212124;
+    border: 4px solid #0074D9;
+}
