@@ -39,6 +39,10 @@ body {
     margin-bottom: var(--separacion);
 }
 
+.container .row-file {
+    margin-bottom: var(--separacion);
+}
+
 /*-----------------------------------*/
 /* estilos de los label */
 /*-----------------------------------*/
@@ -77,7 +81,7 @@ body {
     transform: scaleY(0);
 }
 
-.container .form .alert-form i {
+.container .form .alert-form svg {
     margin-right: var(--separacion-small);
 }
 
@@ -107,7 +111,7 @@ body {
     margin-bottom: var(--separacion-small);
 }
 
-.container .btn i {
+.container .btn svg {
     margin-right: var(--separacion-small);
 }
 
@@ -122,7 +126,6 @@ body {
 /* estilos del btn file */
 .container .btn-file {
     position: relative;
-    margin-bottom: var(--separacion);
 }
 
 .container .btn-file .input-file {
@@ -143,8 +146,23 @@ body {
     text-align: center;
 }
 
-.container .btn-file .txt-file i {
+.container .btn-file .txt-file svg {
     margin-right: var(--separacion-small);
+}
+
+/* estilos del alert file */
+.container .alert-file {
+    display: block;
+    width: 100%;
+    padding: 0 var(--separacion-small);
+    color: #FF0000;
+    font-size: 18px;
+    transition: all .3S ease;
+    opacity: 0;
+}
+
+.container .alert-file.is-active {
+    opacity: 1;
 }
 
 /* estilos del btn submit */
