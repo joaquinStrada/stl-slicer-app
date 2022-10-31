@@ -9,11 +9,13 @@
 </head>
 
 <body>
-  <form class="container" enctype="multipart/form-data">
+  <form class="container" id="form-app" enctype="multipart/form-data">
     <h1 class="title">STL SLICER</h1>
     <div class="form">
       <p class="alert-form" id="alert-form">
-        <i class="fa-solid fa-circle-check" id="icon-alert-form"></i>
+        <span id="icon-alert-form">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </span>
         <span id="txt-alert-form">Archivo Analizado Satisfactoriamente</span>
       </p>
       <div class="row row-file">
@@ -27,7 +29,7 @@
         </div>
         <p class="alert-file" id="alert-file">Debe seleccionar un archivo</p>
       </div>
-      <div class="row row-stl-viewer">
+      <div class="row row-stl-viewer" id="row-stl-viewer">
         <stl-part-viewer></stl-part-viewer>
       </div>
       <div class="row">
