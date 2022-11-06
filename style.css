@@ -123,6 +123,16 @@ body {
     transform: scale(.95);
 }
 
+.container .btn[disabled],
+.container .btn[disabled]:hover {
+    background: rgba(0, 116, 217, .5);
+    cursor: not-allowed;
+}
+
+.container .btn[disabled]:active {
+    transform: scale(1);
+}
+
 /* estilos del btn file */
 .container .btn-file {
     position: relative;

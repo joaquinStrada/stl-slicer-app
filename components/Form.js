@@ -11,6 +11,7 @@ export default class Form {
         this.inputFile = $id('input-file')
         this.txtFile = $id('txt-file')
         this.alertFile = $id('alert-file')
+        this.btnSubmit = $id('btn-submit')
 
         this.stlViewer = new StlViewer()
 
@@ -118,5 +119,17 @@ export default class Form {
 
     render() {
         this.form.reset()
+    }
+
+    disableForm() {
+        if (!this.btnSubmit.hasAttribute('disabled')) {
+            this.btnSubmit.setAttribute('disabled', 'disabled')
+        }
+    }
+
+    enableForm() {
+        if (this.btnSubmit.hasAttribute('disabled')) {
+            this.btnSubmit.removeAttribute('disabled')
+        }
     }
 }
